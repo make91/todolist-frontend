@@ -1,0 +1,7 @@
+<textarea #input class="form-control" name="todo-item" placeholder="{{placeholderText}}"
+  [(ngModel)]="inputValue" (ngModelChange)="inputValueChange.emit(inputValue)" required
+  (keydown.enter)="$event.preventDefault(); submitValue.emit(inputValue)" [class.smaller-width]="showArrow && inputValue.trim()"></textarea>
+<svg class="arrow" *ngIf="showArrow && inputValue.trim()" (click)="submitValue.emit(inputValue)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <title>Submit</title>
+  <path d="M21 12l-18 12v-24z"/>
+</svg>

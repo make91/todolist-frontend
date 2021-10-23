@@ -1,0 +1,33 @@
+:host {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+}
+.header {
+  z-index: 5;
+}
+.item-list {
+  max-height: calc(100vh - 84px);
+  overflow: auto;
+}
+.header-content {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.new-item {
+  flex-grow: 1;
+}
+.settings {
+  flex: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.settings svg {
+  fill: #e1e8ff;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,21 @@
+<div class="modal-header">
+  <h4 class="modal-title">Settings</h4>
+  <button type="button" class="close" aria-label="Close" ngbAutofocus (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body">
+  <button type="button" class="btn btn-danger" (click)="deleteChecked()" [disabled]="(todos | async | checked) == 0">
+    Delete checked items
+    <span *ngIf="(todos | async | checked) > 0">({{ todos | async | checked }})</span>
+  </button>
+  <small *ngIf="(todos | async | checked) > 0" class="form-text text-muted">Deletes all items that are currently checked.</small>
+  <div *ngIf="deleteSuccess" class="mt-2 alert alert-success" role="alert">
+    Deleted items successfully
+  </div>
+</div>
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>

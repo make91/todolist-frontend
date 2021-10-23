@@ -1,0 +1,27 @@
+.checked {
+  background-color: #e9ecef;
+  color: #a1a1a1;
+}
+.button-group {
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 0.5rem;
+  column-gap: 0.5rem;
+}
+.button-group > .btn {
+  display: flex;
+  align-items: center;
+}
+.button-group > .btn > svg {
+  fill: white;
+  height: 16px;
+  margin-right: 4px;
+}
+.checkbox,
+.checkbox > input
+ {
+  cursor: pointer;
+}
+.checkbox:hover {
+  background-color: darken(#e9ecef, 20%);
+}
