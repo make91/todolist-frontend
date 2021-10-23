@@ -1,4 +1,8 @@
-# TodolistFrontend
+# Todolist frontend
+
+Used together with [todolist-backend](https://github.com/make91/todolist-backend).
+
+---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
 
